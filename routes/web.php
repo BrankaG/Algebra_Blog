@@ -13,6 +13,8 @@
 
 // Home page
 Route::get('/', ['as' => 'index', 'uses' => 'IndexController@index']);
+//Post page
+Route::get('post/{slug}', ['as' => 'post.show', 'uses' => 'IndexController@show']);
 
 // Authorization
 Route::get('/login', ['as' => 'auth.login.form', 'uses' => 'Auth\SessionController@getLogin']);
